@@ -1,7 +1,9 @@
 function esBisiesto(anio){
+    let result = false;
     if(anio==4){
-        return true;
+        result = true;
     }
+    return result;
 }
 
 export default esBisiesto
