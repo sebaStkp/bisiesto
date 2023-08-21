@@ -1,16 +1,30 @@
-export function esBisiesto_div400(anio){
+export function div400(anio){
     let result = false;
     if(anio%400==0){
         result = true;
     }
     return result;
 }
-
-export function esBisiesto_div100(anio){
-    let result = true;
-    const verificar = esBisiesto_div400(anio);
-    if (verificar==false && anio % 100 == 0){
-        result = false;
+export function div100(anio){
+    let result = false;
+    if (anio % 100 == 0){
+        result = true;
+    }
+    return result;
+}
+export function div4(anio){
+    let result = false;
+    if (anio % 4 == 0){
+        result = true;
+    }
+    return result;
+}
+export function esBisiesto(anio){
+    let result = false;
+    const verificarDiv4 = div4(anio);
+    const verificarDiv100 = div100(anio);
+    if (verificarDiv4==true && verificarDiv100==false){
+        result = true;
     }
     return result;
 }
