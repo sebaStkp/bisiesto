@@ -24,12 +24,6 @@ export function esBisiesto(anio){
     if(anio % 400 == 0)
     {
         result = true;
-        // const verificarDiv4 = div4(anio);
-        // const verificarDiv100 = div100(anio);
-        // if(verificarDiv4 == true && verificarDiv100 == false)
-        // {
-        //     result = true;
-        // }
     }
     else if(anio % 100 == 0){
         result = true;
